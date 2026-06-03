@@ -8,4 +8,4 @@
 
 ## 功能说明
 
-- ex01/HelloWorld.c - 支持键盘输入并显示问候语
+- ex01/HelloWorld.c - HelloWorld with keyboard input and greeting output
