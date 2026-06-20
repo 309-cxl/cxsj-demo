@@ -25,7 +25,6 @@ void setup() {
 void loop() {
   // 逐渐变亮
   for(int dutyCycle = 0; dutyCycle <= 255; dutyCycle++) {
-    // 【新版用法】直接通过引脚号写入
     ledcWrite(ledPin, dutyCycle);
     delay(10);
   }
