@@ -2,6 +2,7 @@
   实验5：多档位触摸调速呼吸灯
   功能：触摸切换速度档位，LED呈现不同速度的呼吸效果
   硬件：ESP32开发板 + 触摸引脚(T0=GPIO4) + LED(GPIO2)
+  更新：调整速度参数，更快但仍有明显差别
 */
 
 // 定义引脚
@@ -15,12 +16,12 @@ const int touchThreshold = 40;
 int speedLevel = 1;
 const int maxSpeedLevel = 3;
 
-// 档位对应的参数
-// 档位1：慢速呼吸（延时50ms，步长1）
-// 档位2：中速呼吸（延时20ms，步长2）
-// 档位3：快速呼吸（延时5ms，步长5）
-int delayTime[] = {50, 20, 5};
-int stepSize[] = {1, 2, 5};
+// 档位对应的参数（已调整：更快但仍有明显差别）
+// 档位1：慢速呼吸（延时10ms，步长5）
+// 档位2：中速呼吸（延时5ms，步长10）
+// 档位3：快速呼吸（延时2ms，步长20）
+int delayTime[] = {10, 5, 2};
+int stepSize[] = {5, 10, 20};
 
 // 触摸状态变量
 bool lastTouchState = false;
